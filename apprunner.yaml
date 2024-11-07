@@ -1,0 +1,10 @@
+version: 1.0
+runtime: python 3
+build:
+  commands:
+    build:
+      - pip install -r requirements.txt
+run:
+  command: gunicorn app:app
+  network:
+    port: 8000
