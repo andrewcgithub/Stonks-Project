@@ -1,13 +1,11 @@
 version: 1.0
-runtime: python311
+runtime: python3.11
+
 build:
   commands:
-    build:
-      - pip install -r requirements.txt
+    # Commands to be executed during the build phase
+    - pip install -r requirements.txt
+
 run:
-runtime-version: 3.11
-pre-run:
-  -pip install -r requirements.txt
-command: python app.py
-network:
-  port: 8000
+  # Command to start your application
+  command: python app.py
